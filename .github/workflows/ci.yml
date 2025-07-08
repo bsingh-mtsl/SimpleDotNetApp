@@ -14,13 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set PowerShell execution policy
-      run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
-      shell: pwsh
-
-    - name: Restore dependencies
-      run: dotnet restore App/App.csproj
-
     - name: Build
       run: dotnet build App/App.csproj --no-restore
 
