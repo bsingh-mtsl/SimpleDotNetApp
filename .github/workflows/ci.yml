@@ -1,0 +1,45 @@
+name: .NET CI
+ 
+on:
+
+  push:
+
+    branches: [ main ]
+
+  pull_request:
+
+    branches: [ main ]
+ 
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+
+    - name: Checkout code
+
+      uses: actions/checkout@v3
+ 
+    - name: Setup .NET
+
+      uses: actions/setup-dotnet@v4
+
+      with:
+
+        dotnet-version: '8.0.x'
+ 
+    - name: Restore dependencies
+
+      run: dotnet restore App/App.csproj
+ 
+    - name: Build
+
+      run: dotnet build App/App.csproj --no-restore
+ 
+    - name: Run App
+
+      run: dotnet run --project App
+
+ 
