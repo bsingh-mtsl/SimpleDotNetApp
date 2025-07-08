@@ -12,3 +12,4 @@ C:\reposBeta\SimpleDotNetApp\App\obj\Debug\net9.0\refint\App.dll
 C:\reposBeta\SimpleDotNetApp\App\obj\Debug\net9.0\App.pdb
 C:\reposBeta\SimpleDotNetApp\App\obj\Debug\net9.0\App.genruntimeconfig.cache
 C:\reposBeta\SimpleDotNetApp\App\obj\Debug\net9.0\ref\App.dll
+C:\reposBeta\SimpleDotNetApp\App\obj\Debug\net9.0\App.sourcelink.json
