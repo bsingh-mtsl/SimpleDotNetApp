@@ -17,5 +17,7 @@ jobs:
     - name: Build
       run: dotnet build App/App.csproj --no-restore
 
-    - name: Run App
-      run: start dotnet run --project App
+    - name: Run App in new console
+  shell: pwsh
+  run: |
+    Start-Process powershell -ArgumentList '-NoExit', '-Command', 'dotnet run --project App'
